@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of Dom</title>
+    <!-- css link  -->
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        li {
+            color: tomato;
+        }
+
+        #fruits-title {
+            color: black;
+        }
+
+        .important-places {
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to my dom</h1>
+    </header>
+    <main>
+        <section class="jalali-list">
+            <h1>My awesome dom de baba</h1>
+            <ul>
+                <li>Jalali set</li>
+                <li>Shafayet</li>
+                <li>bonobash</li>
+                <li>dom de re baba</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="fruits-title">Fruits i like</h1>
+            <ul>
+                <li>apple</li>
+                <li>banana</li>
+                <li>carrots</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="places-title">My tour list</h1>
+            <ul>
+                <li class="important-places">soondorban</li>
+                <li class="important-places">baanndorban</li>
+                <li class="important-places">kataban</li>
+                <li>shalbon</li>
+            </ul>
+        </section>
+    </main>
+    <script src="js/dom.js"></script>
+    <script>
+        const liCollection = document.getElementsByTagName('li');
+        for (const li of liCollection) {
+            // console.log(li)
+        }
+
+
+        // changing something
+        const fruitsTitle = document.getElementById('fruits-title');
+        fruitsTitle.innerText = 'fruites changed by js';
+        // console.log(fruitsTitle)
+
+
+        const allHeadingCollection = document.getElementsByTagName('h1');
+        for (heading of allHeadingCollection) {
+            // console.log(heading)
+        }
+
+        const places = document.getElementsByClassName('important-places');
+        for (const place of places) {
+            // console.log(place.innerText)
+        }
+
+        // query selector all
+        const someLi = document.querySelectorAll('.jalali-list li');
+        for (const li of someLi) {
+            // console.log(li)
+        }
+
+        //query slector 
+        const firstLi = document.querySelector('.jalali-list li');
+        console.log(firstLi.innerText);
+    </script>
+</body>
+
+</html>
