@@ -26,9 +26,12 @@
 <body>
     <header>
         <h1>Welcome to my dom</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum laborum vel itaque fuga qui explicabo natus
+            ducimus corporis et aliquam architecto totam enim minima maxime delectus, provident obcaecati. Corrupti
+            error quam aspernatur quae unde rem.</p>
     </header>
-    <main>
-        <section class="jalali-list">
+    <main id="main-container">
+        <section id="dom" class="jalali-list">
             <h1>My awesome dom de baba</h1>
             <ul>
                 <li>Jalali set</li>
@@ -45,9 +48,9 @@
                 <li>carrots</li>
             </ul>
         </section>
-        <section>
+        <section id="places-container">
             <h1 id="places-title">My tour list</h1>
-            <ul>
+            <ul id="places-list">
                 <li class="important-places">soondorban</li>
                 <li class="important-places">baanndorban</li>
                 <li class="important-places">kataban</li>
@@ -56,6 +59,8 @@
         </section>
     </main>
     <script src="js/dom.js"></script>
+    <script src="js/append.js"></script>
+    <script src="js/styleinjs.js"></script>
     <script>
         const liCollection = document.getElementsByTagName('li');
         for (const li of liCollection) {
@@ -65,7 +70,7 @@
 
         // changing something
         const fruitsTitle = document.getElementById('fruits-title');
-        fruitsTitle.innerText = 'fruites changed by js';
+        fruitsTitle.innerText = 'Fruites changed by js';
         // console.log(fruitsTitle)
 
 
@@ -87,7 +92,7 @@
 
         //query slector 
         const firstLi = document.querySelector('.jalali-list li');
-        console.log(firstLi.innerText);
+        // console.log(firstLi.innerText);
     </script>
 </body>
 
