@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js dom event summery</title>
+</head>
+
+<body>
+    <h1>Final Dom event handlers</h1>
+
+    <h3 id="handler-status">Default Input Text</h3>
+
+    <p id="input-text">Default input text</p>
+    <input id="input-field" type="text"><button id="update-btn">Update</button>
+    <br><br>
+    <button onclick="handleOnClick()">Handle event by Add on click function</button>
+
+    <button id="event-listener">Handle event by add event listener</button>
+    <!-- =========================script========================= -->
+    <script>
+        function handleOnClick() {
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText = 'Handled by function atached on onclick attribute'
+            document.body
+        }
+
+        // method 2
+        document.getElementById('event-listener').addEventListener('click', function () {
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText = 'Text updated by add event listener button'
+        })
+
+        // method 2 recap
+        document.getElementById('update-btn').addEventListener('click', function () {
+            const inputField = document.getElementById('input-field');
+            const inputText = inputField.value;
+
+            const p = document.getElementById('input-text');
+            p.innerText = inputText;
+            inputField.value = '';
+
+        })
+    </script>
+</body>
+
+</html>
