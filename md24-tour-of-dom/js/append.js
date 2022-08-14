@@ -21,19 +21,38 @@ const h1 = document.createElement('h1');
 h1.innerText = 'Favourite fast food';
 section.appendChild(h1)
 
+const ul = document.createElement('ul');
+section.appendChild(ul)
+
 const li1 = document.createElement('li');
 li1.innerText = 'biriyani';
-section.appendChild(li1)
+ul.appendChild(li1)
 
 const li2 = document.createElement('li');
 li2.innerText = 'borhanii';
-section.appendChild(li2);
+ul.appendChild(li2);
 
 const li3 = document.createElement('li');
 li3.innerText = 'salad';
-section.appendChild(li3)
+ul.appendChild(li3)
 // 3. added child
-mainContainer.appendChild(section)
+mainContainer.appendChild(section);
+
+
+
+// ================set inner html directly========================
+const sectionDress = document.createElement('section')
+
+sectionDress.innerHTML = `
+<h1>My dress section </h1>
+<ul>
+<li> Shirt </li>
+<li> Sendu genji </li>
+<li> Lungieeeeeeee </li>
+ </ul>
+`;
+
+mainContainer.appendChild(sectionDress)
 
 
 
