@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore more events</title>
+</head>
+
+<body>
+    <h1>Explore more events</h1>
+    <div>
+        <button id="enter-btn">Mouse enter</button>
+        <button id="mouse-move">Move mouse</button>
+        <input id="focus-event" type="text">
+    </div>
+    <script>
+        /*  // 1. mouse enter
+         document.getElementById('enter-btn').addEventListener('mouseenter', function () {
+             // console.log('mouse enter')
+         })
+ 
+         // 2 mouse move
+         document.getElementById('mouse-move').addEventListener('mousemove', function () {
+             // console.log('mouse move added')
+         })
+ 
+         // 3.focus event
+         document.getElementById('focus-event').addEventListener('focus', function () {
+             // console.log('added focus event')
+         })
+         // 4. blur event
+         document.getElementById('focus-event').addEventListener('blur', function () {
+             // console.log('added blur event')
+         }) */
+
+
+
+        // 3 types of type event  
+        // 1. keydown 
+        // document.getElementById('focus-event').addEventListener('keydown', function () {
+        //     console.log('keydown event added')
+        // })
+
+        // 2. keyup 
+        document.getElementById('focus-event').addEventListener('keyup', function () {
+            console.log('keyup event added')
+        })
+    </script>
+</body>
+
+</html>
