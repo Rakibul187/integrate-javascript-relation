@@ -39,13 +39,18 @@
 
         // 3 types of type event  
         // 1. keydown 
-        // document.getElementById('focus-event').addEventListener('keydown', function () {
-        //     console.log('keydown event added')
+        // document.getElementById('focus-event').addEventListener('keydown', function (event) {
+        //     console.log(event.target.value)
         // })
 
-        // 2. keyup 
-        document.getElementById('focus-event').addEventListener('keyup', function () {
-            console.log('keyup event added')
+        // 2. keypress 
+        // document.getElementById('focus-event').addEventListener('keyup', function (event) {
+        //     console.log(event.target.value)
+        // })
+
+        // 3. keyup 
+        document.getElementById('focus-event').addEventListener('keyup', function (event) {
+            console.log(event.target.value)
         })
     </script>
 </body>

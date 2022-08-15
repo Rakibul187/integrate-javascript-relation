@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github delete event</title>
+</head>
+
+<body>
+    <!-- <h1 id="secret-info">My secret info</h1>
+    <input type="text" name="" id="delete-confirm" placeholder="Please type delete">
+    <button id="btn-delete" disabled>Delete</button>
+
+    <script>
+        document.getElementById('delete-confirm').addEventListener('keyup', function (event) {
+            const text = event.target.value;
+            const deleteBtn = document.getElementById('btn-delete')
+            if (text === 'delete') {
+                deleteBtn.removeAttribute('disabled')
+            }
+            else {
+                deleteBtn.setAttribute('disabled', true)
+            }
+        })
+        document.getElementById('btn-delete').addEventListener('click', function (event) {
+            const secret = document.getElementById('secret-info');
+            secret.style.display = 'none';
+        })
+    </script> -->
+
+    <!-- <h1 id="secret-text">My secret text</h1>
+    <input id="text" type="text">
+    <button id="delete-btn" disabled>Delete</button>
+
+    <script>
+        document.getElementById('text').addEventListener('keyup', function (event) {
+            const text = event.target.value;
+            const deleteBtn = document.getElementById('delete-btn');
+            if (text === 'delete') {
+                deleteBtn.removeAttribute('disabled');
+
+            }
+            else {
+                deleteBtn.setAttribute('disabled', true)
+            }
+        })
+        document.getElementById('delete-btn').addEventListener('click', function (event) {
+            document.getElementById('secret-text').style.display = 'none';
+        })
+    </script> -->
+
+
+    <h1 id="secret-text">Secret text should be delete</h1>
+    <input id="text" type="text">
+    <button id="dlt-btn" disabled>Delete</button>
+
+    <script>
+        document.getElementById('text').addEventListener('keyup', function (event) {
+            const text = event.target.value;
+            const dltBtn = document.getElementById('dlt-btn');
+            if (text === 'delete') {
+                dltBtn.removeAttribute('disabled')
+            }
+            else {
+                dltBtn.setAttribute('disabled', true)
+            }
+        })
+        document.getElementById('dlt-btn').addEventListener('click', function () {
+            document.getElementById('secret-text').style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>
