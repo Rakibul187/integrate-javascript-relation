@@ -5,7 +5,7 @@ function yes() {
 }
 
 function ofcourse() {
-    document.getElementById('text').innerText = "ofcourse! Please mary me!!"
+    document.getElementById('text').innerText = "of course! Please mary me!!"
 }
  */
 
@@ -14,5 +14,5 @@ document.getElementById('yes').addEventListener('click', function () {
     document.getElementById('text').innerText = "Yeeees! Let's do right now!"
 })
 document.getElementById('ofcourse').addEventListener('click', function () {
-    document.getElementById('text').innerText = "Ofcourse! Please marry me baby"
+    document.getElementById('text').innerText = "Of Course! Please marry me baby"
 })
