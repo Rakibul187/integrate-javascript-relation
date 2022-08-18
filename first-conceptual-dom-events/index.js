@@ -28,7 +28,8 @@ for (const classTag of classList) {
 console.log(h1.style.color = 'red')
  */
 
-// 4. query selector 
+/*
+ // 4. query selector 
 // const element = document.querySelector('#first');
 // console.log(element.innerText)
 
@@ -37,3 +38,47 @@ console.log(h1.style.color = 'red')
 
 const classList = document.querySelectorAll('.test')[1];
 console.log(classList)
+ */
+
+/* 
+
+
+// Dynamic style- manipulate CSS with javascript 
+
+const h1 = document.getElementById('first');
+h1.style.color = 'red';
+h1.style.backgroundColor = 'skyBlue';
+h1.style.padding = '10px';
+ */
+
+/* 
+//  add & remove class
+const h1 = document.getElementById('first');
+h1.classList.add('third');
+
+h1.classList.remove('third'); 
+*/
+
+/*
+ // create element and append child
+const div = document.getElementById('half');
+const h2 = document.createElement('h2');
+h2.innerText = 'I am created by js5 and added';
+h2.style.color = 'blue'
+
+div.appendChild(h2) 
+*/
+
+/*
+ // innertext vs innerHtml
+const div = document.getElementById('half');
+console.log(div.innerHTML)
+
+console.log(div.innerText) 
+*/
+
+// get & set atribute 
+const div = document.getElementById('half');
+console.log(div.getAttribute('id'))
+console.log(div.setAttribute('class', 'yellow'))
+
