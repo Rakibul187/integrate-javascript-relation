@@ -1,39 +1,23 @@
-/*
-1. add event handler with the withdraw button
-2. get the withdraw amount 
-3. clear the withdraw after getting withdraw amount
-4. get previous withdraw total
-5. calculate total withdraw amount and set it to the withdraw total element
-6. get previous balance
-7. calculate new balance and set it to the balance total element
+/* 
+1. add withdraw btn event handler 
+2. get withdraw amount by get InputFieldValueById function 
+3. get previous withdraw amount by using getTextElementValueById function
+4.calculate withdraw total & set the value
+5. get previous balance total
+6. calculate balance total
+7. set balance total by using setTextElementTotalValue function
 */
 
-// step 1 :
-document.getElementById('withdraw-btn').addEventListener('click', function () {
 
-    // step 2 
-    const withdrawField = document.getElementById('withdraw-field');
-    const newWithdrawAmountString = withdrawField.value;
-    const newWithdrawAmount = parseFloat(newWithdrawAmountString);
+document.getElementById('btn-withdraw').addEventListener('click', function () {
+    const newWithdrawAmount = getInputFieldValueById('withdraw-field')
+    const previousWithdrawTotal = getTextElementValueById('withdraw-total');
+    const newWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
 
-    // step 3 :
-    withdrawField.value = '';
+    setTextElementValueById('withdraw-total', newWithdrawTotal);
 
-    // step 4
-    const withdrawTotalElement = document.getElementById('withdraw-total');
-    const previousWithdrawTotalString = withdrawTotalElement.innerText;
-    const previousWithdrawTotal = parseFloat(previousWithdrawTotalString);
-
-    // step 5 :
-    const newWthdrawTotal = previousWithdrawTotal + newWithdrawAmount;
-    withdrawTotalElement.innerText = newWthdrawTotal;
-
-    // step 6 : 
-    const balanceElement = document.getElementById('balance-total');
-    const previousBalanceTotalString = balanceElement.innerText;
-    const previousBalanceTotal = parseFloat(previousBalanceTotalString);
-
-    // step 7: 
+    const previousBalanceTotal = getTextElementValueById('balance-total');
     const newBalanceTotal = previousBalanceTotal - newWithdrawAmount;
-    balanceElement.innerText = newBalanceTotal;
+
+    setTextElementValueById('balance-total', newBalanceTotal)
 })
